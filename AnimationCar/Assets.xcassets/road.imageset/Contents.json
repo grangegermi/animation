@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "3d-rendered-asphalt-road-top-view-with-white-dashed-line_493806-6320.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
