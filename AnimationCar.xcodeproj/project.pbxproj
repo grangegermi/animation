@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F590B36896359EBE2D19430 /* Pods_AnimationCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5694FCA5B4CA65E024B5AC /* Pods_AnimationCar.framework */; };
 		DB22086F28DE4C63004A93F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22086E28DE4C63004A93F5 /* AppDelegate.swift */; };
 		DB22087128DE4C63004A93F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22087028DE4C63004A93F5 /* SceneDelegate.swift */; };
-		DB22087328DE4C63004A93F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22087228DE4C63004A93F5 /* ViewController.swift */; };
+		DB22087328DE4C63004A93F5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22087228DE4C63004A93F5 /* GameViewController.swift */; };
 		DB22087628DE4C63004A93F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB22087428DE4C63004A93F5 /* Main.storyboard */; };
 		DB22087828DE4C67004A93F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB22087728DE4C67004A93F5 /* Assets.xcassets */; };
 		DB22087B28DE4C67004A93F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB22087928DE4C67004A93F5 /* LaunchScreen.storyboard */; };
@@ -19,14 +18,19 @@
 		DB22088728DE4DE0004A93F5 /* extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22088628DE4DE0004A93F5 /* extension+Button.swift */; };
 		DB22088A28DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22088828DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.swift */; };
 		DB22088B28DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB22088928DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.xib */; };
+		DB66436F28E752600065C897 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66436E28E7525F0065C897 /* SettingsViewController.swift */; };
+		DB66437128E758340065C897 /* ChangeColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66437028E758330065C897 /* ChangeColorViewController.swift */; };
+		DB66437328E758550065C897 /* ChangeBarrierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66437228E758550065C897 /* ChangeBarrierViewController.swift */; };
+		E84595C2065478D4A78A654B /* Pods_AnimationCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8EBDDA279EFA404C195E84 /* Pods_AnimationCar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7B5694FCA5B4CA65E024B5AC /* Pods_AnimationCar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationCar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0787EF05B79929F89780F8FC /* Pods-AnimationCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationCar.release.xcconfig"; path = "Target Support Files/Pods-AnimationCar/Pods-AnimationCar.release.xcconfig"; sourceTree = "<group>"; };
+		8EA97B9B40EF5009E859C305 /* Pods-AnimationCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationCar.debug.xcconfig"; path = "Target Support Files/Pods-AnimationCar/Pods-AnimationCar.debug.xcconfig"; sourceTree = "<group>"; };
 		DB22086B28DE4C63004A93F5 /* AnimationCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB22086E28DE4C63004A93F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB22087028DE4C63004A93F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB22087228DE4C63004A93F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB22087228DE4C63004A93F5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		DB22087528DE4C63004A93F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB22087728DE4C67004A93F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB22087A28DE4C67004A93F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,8 +40,10 @@
 		DB22088628DE4DE0004A93F5 /* extension+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+Button.swift"; sourceTree = "<group>"; };
 		DB22088828DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithCatsCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB22088928DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageWithCatsCollectionViewCell.xib; sourceTree = "<group>"; };
-		EA9CD29BA0D7B634A90ABE8A /* Pods-AnimationCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationCar.debug.xcconfig"; path = "Target Support Files/Pods-AnimationCar/Pods-AnimationCar.debug.xcconfig"; sourceTree = "<group>"; };
-		EE2ED48BE0E4CD6044C54BEA /* Pods-AnimationCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationCar.release.xcconfig"; path = "Target Support Files/Pods-AnimationCar/Pods-AnimationCar.release.xcconfig"; sourceTree = "<group>"; };
+		DB66436E28E7525F0065C897 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DB66437028E758330065C897 /* ChangeColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColorViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		DB66437228E758550065C897 /* ChangeBarrierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeBarrierViewController.swift; sourceTree = "<group>"; };
+		FD8EBDDA279EFA404C195E84 /* Pods_AnimationCar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationCar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,28 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F590B36896359EBE2D19430 /* Pods_AnimationCar.framework in Frameworks */,
+				E84595C2065478D4A78A654B /* Pods_AnimationCar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B4E2BBDEF32B99CBA7795D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD8EBDDA279EFA404C195E84 /* Pods_AnimationCar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC32D937B221BD1FB084403D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EA9CD29BA0D7B634A90ABE8A /* Pods-AnimationCar.debug.xcconfig */,
-				EE2ED48BE0E4CD6044C54BEA /* Pods-AnimationCar.release.xcconfig */,
+				8EA97B9B40EF5009E859C305 /* Pods-AnimationCar.debug.xcconfig */,
+				0787EF05B79929F89780F8FC /* Pods-AnimationCar.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		D475DF0DF1E423CF133E898F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7B5694FCA5B4CA65E024B5AC /* Pods_AnimationCar.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DB22086228DE4C63004A93F5 = {
@@ -75,7 +81,7 @@
 				DB22086D28DE4C63004A93F5 /* AnimationCar */,
 				DB22086C28DE4C63004A93F5 /* Products */,
 				CC32D937B221BD1FB084403D /* Pods */,
-				D475DF0DF1E423CF133E898F /* Frameworks */,
+				3B4E2BBDEF32B99CBA7795D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,13 +98,16 @@
 			children = (
 				DB22086E28DE4C63004A93F5 /* AppDelegate.swift */,
 				DB22087028DE4C63004A93F5 /* SceneDelegate.swift */,
-				DB22087228DE4C63004A93F5 /* ViewController.swift */,
 				DB22088228DE4DB2004A93F5 /* SecondViewController.swift */,
 				DB22088428DE4DC1004A93F5 /* MenuViewController.swift */,
+				DB66436E28E7525F0065C897 /* SettingsViewController.swift */,
 				DB22088628DE4DE0004A93F5 /* extension+Button.swift */,
 				DB22088828DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.swift */,
 				DB22088928DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.xib */,
 				DB22087428DE4C63004A93F5 /* Main.storyboard */,
+				DB22087228DE4C63004A93F5 /* GameViewController.swift */,
+				DB66437028E758330065C897 /* ChangeColorViewController.swift */,
+				DB66437228E758550065C897 /* ChangeBarrierViewController.swift */,
 				DB22087728DE4C67004A93F5 /* Assets.xcassets */,
 				DB22087928DE4C67004A93F5 /* LaunchScreen.storyboard */,
 				DB22087C28DE4C67004A93F5 /* Info.plist */,
@@ -113,12 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB22087F28DE4C67004A93F5 /* Build configuration list for PBXNativeTarget "AnimationCar" */;
 			buildPhases = (
-				3E30A718CB75C1E54E94DFAF /* [CP] Check Pods Manifest.lock */,
+				1BCC7008CDC1B4A7E98FD2CE /* [CP] Check Pods Manifest.lock */,
 				DB22086728DE4C63004A93F5 /* Sources */,
 				DB22086828DE4C63004A93F5 /* Frameworks */,
 				DB22086928DE4C63004A93F5 /* Resources */,
-				00CC0DB5E31C92451952B9AB /* [CP] Embed Pods Frameworks */,
 				DBC23CC928DE5A4100AEF9B3 /* ShellScript */,
+				8C1EC83B1E1509174A3CC112 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,24 +186,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00CC0DB5E31C92451952B9AB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AnimationCar/Pods-AnimationCar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AnimationCar/Pods-AnimationCar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimationCar/Pods-AnimationCar-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3E30A718CB75C1E54E94DFAF /* [CP] Check Pods Manifest.lock */ = {
+		1BCC7008CDC1B4A7E98FD2CE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -216,9 +208,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DBC23CC928DE5A4100AEF9B3 /* ShellScript */ = {
+		8C1EC83B1E1509174A3CC112 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimationCar/Pods-AnimationCar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimationCar/Pods-AnimationCar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimationCar/Pods-AnimationCar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBC23CC928DE5A4100AEF9B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -229,7 +238,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
@@ -244,9 +253,12 @@
 				DB22088A28DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.swift in Sources */,
 				DB22088728DE4DE0004A93F5 /* extension+Button.swift in Sources */,
 				DB22088528DE4DC1004A93F5 /* MenuViewController.swift in Sources */,
-				DB22087328DE4C63004A93F5 /* ViewController.swift in Sources */,
+				DB22087328DE4C63004A93F5 /* GameViewController.swift in Sources */,
+				DB66437128E758340065C897 /* ChangeColorViewController.swift in Sources */,
 				DB22086F28DE4C63004A93F5 /* AppDelegate.swift in Sources */,
 				DB22087128DE4C63004A93F5 /* SceneDelegate.swift in Sources */,
+				DB66437328E758550065C897 /* ChangeBarrierViewController.swift in Sources */,
+				DB66436F28E752600065C897 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +400,7 @@
 		};
 		DB22088028DE4C67004A93F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA9CD29BA0D7B634A90ABE8A /* Pods-AnimationCar.debug.xcconfig */;
+			baseConfigurationReference = 8EA97B9B40EF5009E859C305 /* Pods-AnimationCar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -416,7 +428,7 @@
 		};
 		DB22088128DE4C67004A93F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE2ED48BE0E4CD6044C54BEA /* Pods-AnimationCar.release.xcconfig */;
+			baseConfigurationReference = 0787EF05B79929F89780F8FC /* Pods-AnimationCar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

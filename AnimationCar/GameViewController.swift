@@ -12,8 +12,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+
+//protocol ChangeColorDelegate:AnyObject {
+//
+//    func changeColor ()
+//}
+
+
+
+
+class GameViewController:UIViewController {
     
+    
+    var colorWhite = UIColor()
+    var colorPurple = UIColor()
+    var colorMint = UIColor()
+  
     let imageViewCar = UIImageView(frame: CGRect(x: 0, y: 600, width: 100, height: 100))
     
     let brickView1 = UIImageView(frame: CGRect(x: 50, y: -50, width: 100, height: 60))
@@ -31,7 +45,7 @@ class ViewController: UIViewController {
     let viewForest1 = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 2000))
     let viewForest2 = UIView(frame: CGRect(x: 380, y: 0, width:40, height: 2000))
     let viewForest3 = UIView(frame: CGRect(x: 380, y: 0, width: 40, height: 2000))
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,8 +77,8 @@ class ViewController: UIViewController {
         brickView1.backgroundColor = .systemGreen
         
         view.addSubview(imageViewCar)
-        imageViewCar.backgroundColor = .purple
-        
+        createcolorImage()
+
         view.addSubview(viewForest)
         view.addSubview(viewForest1)
         view.addSubview(viewForest2)
@@ -85,14 +99,13 @@ class ViewController: UIViewController {
         buttonLeft.addTarget(self, action: #selector(touchLeft), for: .touchUpInside)
         buttonRight.addTarget(self, action: #selector(touchRight), for: .touchUpInside)
         
-        UIView.animate(withDuration: 30.0, delay: 0, options: [.repeat,
-                                                               .curveLinear], animations: {
-                                                                   
+        UIView.animate(withDuration: 30.0, delay: 0, options: [.repeat,.curveLinear], animations: {
             roadView1.frame = CGRect(x: 0, y: 0 + 900, width: self.view.frame.width, height: self.view.frame.height)
             roadView.frame = CGRect(x: 0, y: 0 , width: self.view.frame.width, height: self.view.frame.height)
         })
 }
     
+   
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -108,6 +121,7 @@ class ViewController: UIViewController {
                     guard let settingView = self.storyboard!.instantiateViewController(identifier: "MenuViewController") as? MenuViewController else {return}
                     settingView.modalPresentationStyle = .fullScreen
                     self.present(settingView, animated: true)
+
                     
                 }
             })
@@ -159,7 +173,22 @@ class ViewController: UIViewController {
         })
         
     }
-    
+    func createcolorImage (){
+        imageViewCar.image = imageViewCar.image!.withRenderingMode(.alwaysTemplate)
+        
+        if imageViewCar.tintColor != colorWhite{
+            
+                imageViewCar.tintColor = UIColor.clear
+                imageViewCar.tintColor = colorWhite
+            
+            
+            } else if imageViewCar.tintColor != colorPurple{
+                imageViewCar.tintColor = colorPurple
+                
+            } else  if  imageViewCar.tintColor != colorMint{
+            imageViewCar.tintColor = colorMint
+        }
+    }
     @objc func touchUp (_ sender:UIButton) {
         
         UIView.animate(withDuration: 2.0, delay: 0, options: [.curveLinear], animations: {
@@ -210,6 +239,7 @@ class ViewController: UIViewController {
             
         })
     }
+    
   
 }
 
