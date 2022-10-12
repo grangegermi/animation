@@ -13,14 +13,12 @@
 		DB22087628DE4C63004A93F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB22087428DE4C63004A93F5 /* Main.storyboard */; };
 		DB22087828DE4C67004A93F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB22087728DE4C67004A93F5 /* Assets.xcassets */; };
 		DB22087B28DE4C67004A93F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB22087928DE4C67004A93F5 /* LaunchScreen.storyboard */; };
-		DB22088328DE4DB2004A93F5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22088228DE4DB2004A93F5 /* SecondViewController.swift */; };
 		DB22088528DE4DC1004A93F5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22088428DE4DC1004A93F5 /* MenuViewController.swift */; };
 		DB22088728DE4DE0004A93F5 /* extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22088628DE4DE0004A93F5 /* extension+Button.swift */; };
-		DB22088A28DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22088828DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.swift */; };
-		DB22088B28DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB22088928DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.xib */; };
 		DB66436F28E752600065C897 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66436E28E7525F0065C897 /* SettingsViewController.swift */; };
-		DB66437128E758340065C897 /* ChangeColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66437028E758330065C897 /* ChangeColorViewController.swift */; };
+		DB66437128E758340065C897 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66437028E758330065C897 /* ColorViewController.swift */; };
 		DB66437328E758550065C897 /* ChangeBarrierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB66437228E758550065C897 /* ChangeBarrierViewController.swift */; };
+		DB95364328F5AF2200B84746 /* ChangeNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB95364228F5AF2200B84746 /* ChangeNameController.swift */; };
 		E84595C2065478D4A78A654B /* Pods_AnimationCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8EBDDA279EFA404C195E84 /* Pods_AnimationCar.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,14 +33,12 @@
 		DB22087728DE4C67004A93F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB22087A28DE4C67004A93F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB22087C28DE4C67004A93F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB22088228DE4DB2004A93F5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DB22088428DE4DC1004A93F5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DB22088628DE4DE0004A93F5 /* extension+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+Button.swift"; sourceTree = "<group>"; };
-		DB22088828DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithCatsCollectionViewCell.swift; sourceTree = "<group>"; };
-		DB22088928DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageWithCatsCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB66436E28E7525F0065C897 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		DB66437028E758330065C897 /* ChangeColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColorViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		DB66437028E758330065C897 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		DB66437228E758550065C897 /* ChangeBarrierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeBarrierViewController.swift; sourceTree = "<group>"; };
+		DB95364228F5AF2200B84746 /* ChangeNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameController.swift; sourceTree = "<group>"; };
 		FD8EBDDA279EFA404C195E84 /* Pods_AnimationCar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationCar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,16 +94,14 @@
 			children = (
 				DB22086E28DE4C63004A93F5 /* AppDelegate.swift */,
 				DB22087028DE4C63004A93F5 /* SceneDelegate.swift */,
-				DB22088228DE4DB2004A93F5 /* SecondViewController.swift */,
 				DB22088428DE4DC1004A93F5 /* MenuViewController.swift */,
 				DB66436E28E7525F0065C897 /* SettingsViewController.swift */,
-				DB22088628DE4DE0004A93F5 /* extension+Button.swift */,
-				DB22088828DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.swift */,
-				DB22088928DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.xib */,
-				DB22087428DE4C63004A93F5 /* Main.storyboard */,
-				DB22087228DE4C63004A93F5 /* GameViewController.swift */,
-				DB66437028E758330065C897 /* ChangeColorViewController.swift */,
+				DB66437028E758330065C897 /* ColorViewController.swift */,
 				DB66437228E758550065C897 /* ChangeBarrierViewController.swift */,
+				DB95364228F5AF2200B84746 /* ChangeNameController.swift */,
+				DB22087228DE4C63004A93F5 /* GameViewController.swift */,
+				DB22088628DE4DE0004A93F5 /* extension+Button.swift */,
+				DB22087428DE4C63004A93F5 /* Main.storyboard */,
 				DB22087728DE4C67004A93F5 /* Assets.xcassets */,
 				DB22087928DE4C67004A93F5 /* LaunchScreen.storyboard */,
 				DB22087C28DE4C67004A93F5 /* Info.plist */,
@@ -177,7 +171,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB22087B28DE4C67004A93F5 /* LaunchScreen.storyboard in Resources */,
-				DB22088B28DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.xib in Resources */,
 				DB22087828DE4C67004A93F5 /* Assets.xcassets in Resources */,
 				DB22087628DE4C63004A93F5 /* Main.storyboard in Resources */,
 			);
@@ -249,12 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB22088328DE4DB2004A93F5 /* SecondViewController.swift in Sources */,
-				DB22088A28DE4E11004A93F5 /* ImageWithCatsCollectionViewCell.swift in Sources */,
+				DB95364328F5AF2200B84746 /* ChangeNameController.swift in Sources */,
 				DB22088728DE4DE0004A93F5 /* extension+Button.swift in Sources */,
 				DB22088528DE4DC1004A93F5 /* MenuViewController.swift in Sources */,
 				DB22087328DE4C63004A93F5 /* GameViewController.swift in Sources */,
-				DB66437128E758340065C897 /* ChangeColorViewController.swift in Sources */,
+				DB66437128E758340065C897 /* ColorViewController.swift in Sources */,
 				DB22086F28DE4C63004A93F5 /* AppDelegate.swift in Sources */,
 				DB22087128DE4C63004A93F5 /* SceneDelegate.swift in Sources */,
 				DB66437328E758550065C897 /* ChangeBarrierViewController.swift in Sources */,
