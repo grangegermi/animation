@@ -15,8 +15,7 @@ class ChangeBarrierViewController: UIViewController {
     
     let buttonBus = UIButton(frame: CGRect(x: 0, y: 400, width: 200, height: 30))
 
-   var viewSelf = UIImageView()
-    var image = UIImage()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,8 +24,7 @@ class ChangeBarrierViewController: UIViewController {
         buttonCar.center.x = view.center.x
         buttonCar.setTitle("Car barrier", for: .normal)
         buttonCar.addTarget(self, action: #selector(barrierCar), for: .touchUpInside)
-        
-        
+    
         
         buttonDioxide.backgroundColor = .gray
         buttonDioxide.layer.cornerRadius = 10
@@ -42,32 +40,47 @@ class ChangeBarrierViewController: UIViewController {
         view.addSubview(buttonCar)
         view.addSubview(buttonDioxide)
         view.addSubview(buttonBus)
-        viewSelf.image = UIImage(systemName: "bolt.car.fill")
+        
     }
 
     @objc func barrierCar(_ sender:UIButton){
 
         var gameVC = GameViewController()
-        gameVC.brickView1.image = UIImage(named: "car")
-        gameVC.brickView2.image = UIImage(systemName: "bus.fill")
-        gameVC.brickView3.image = UIImage(systemName: "bus.fill")
-        gameVC.brickView4.image = UIImage(systemName: "bus.fill")
+        
+        gameVC.brickView1.image = UIImage(systemName: "bolt.car.fill")
+        gameVC.brickView2.image = UIImage(systemName: "bolt.car.fill")
+        gameVC.brickView3.image = UIImage(systemName: "bolt.car.fill")
+        gameVC.brickView4.image = UIImage(systemName: "bolt.car.fill")
+        
         gameVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(gameVC, animated: true)
+        
+       
     
-
         
     }
     @objc func barrierDioxide(_ sender:UIButton){
         var gameVC = GameViewController()
-        gameVC.brickView2.image = UIImage(systemName: "carbon.dioxide.cloud")
         gameVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(gameVC, animated: true)
+        gameVC.brickView1.image = UIImage(named: "carbon.dioxide.cloud")
+        gameVC.brickView2.image = UIImage(named: "carbon.dioxide.cloud")
+        gameVC.brickView3.image = UIImage(named: "carbon.dioxide.cloud")
+        gameVC.brickView4.image = UIImage(named: "carbon.dioxide.cloud")
+       
+    
     
     }
     
     @objc func barrierBus (_ sender:UIButton){
-  
+        var gameVC = GameViewController()
+        gameVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(gameVC, animated: true)
+        
+        gameVC.brickView1.image = UIImage(named: "bus.fill")
+        gameVC.brickView2.image = UIImage(named: "bus.fill")
+        gameVC.brickView3.image = UIImage(named: "bus.fill")
+        gameVC.brickView4.image = UIImage(named: "bus.fill")
         
     }
 }

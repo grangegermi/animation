@@ -9,8 +9,10 @@ import UIKit
 
 class ChangeNameController: UIViewController {
 
+   
     let textField = UITextField(frame: CGRect(x: 0, y: 100, width: 300, height: 30))
     let button = UIButton(frame: CGRect(x: 0, y: 200, width: 200, height: 30))
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,7 @@ class ChangeNameController: UIViewController {
         textField.center.x = view.center.x
         textField.placeholder = "Enter your name"
         textField.borderStyle = .roundedRect
-        
+       
       
     
         button.backgroundColor = .gray
@@ -31,14 +33,19 @@ class ChangeNameController: UIViewController {
         view.addSubview(button)
         
     }
-    
+ 
   
     @objc func save (_ sender:UIButton){
         
         let menuVC = MenuViewController()
-        menuVC.label.text = textField.text
-     
+    
+        guard  let vc = navigationController?.viewControllers.first(where: {$0 is MenuViewController}) as? MenuViewController else {
+            return
+        }
+        vc.label.text = textField.text
         self.navigationController?.popToRootViewController(animated: true)
+        
+    
    
         
     }

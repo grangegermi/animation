@@ -11,14 +11,17 @@
 import UIKit
 
 
-
 class MenuViewController: UIViewController {
+    
+
+    
+
     
     let buttonGame = UIButton(frame: CGRect(x: 0, y: 200, width: 200, height: 30))
     
     let buttonSettings = UIButton(frame: CGRect(x: 0, y: 300, width: 200, height: 30))
     
-    let label = UILabel(frame: CGRect(x: 0, y: 100, width: 300, height: 100))
+    let label = UILabel(frame: CGRect(x: 0, y: 30, width: 300, height: 100))
     
   
     
@@ -30,8 +33,8 @@ class MenuViewController: UIViewController {
         
         view.addSubview(label)
         label.center.x = view.center.x
-        label.text = "Hello"
-        
+        label.text = "kk"
+
         buttonGame.backgroundColor = .gray
         buttonGame.layer.cornerRadius = 10
         buttonGame.center.x = view.center.x

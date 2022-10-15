@@ -6,26 +6,47 @@
 //
 
 import UIKit
-//
 
-//class ImageViewChangeColor : UIImageView {
-//
-//    var buttonTapped: (() -> Void)?
-//
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//    }
-//
-//    func changeColor () {
-//
-//        buttonTapped?()
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//
-//
+extension UserDefaults {
+    
+    func setColor(color:UIColor?, forKey key:String) {
+        var colorRedData:NSData?
+        var colorPurpleData:NSData?
+        var colorMintData:NSData?
+
+        if let color = color {
+            do {
+                colorRedData = try NSKeyedArchiver.archivedData(withRootObject: color, requiringSecureCoding: false) as NSData?
+                colorPurpleData = try NSKeyedArchiver.archivedData(withRootObject: color, requiringSecureCoding: false) as NSData?
+                colorMintData = try NSKeyedArchiver.archivedData(withRootObject: color, requiringSecureCoding: false) as NSData?
+                set(colorRedData,forKey: key)
+                set(colorPurpleData,forKey: key)
+                set(colorMintData,forKey: key)
+            }  catch let erorr {
+                print( erorr)
+            }
+        }
+        
+    }
+    func colorForKey(key:String) -> UIColor? {
+        var color: UIColor?
+        if let colorRedData = data(forKey: "ColorRed"),
+           let colorPurpleData = data(forKey: "ColorPurple"),
+           let colorMintData = data(forKey: "ColorMint")
+        {
+            do {
+               color =  try NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: colorRedData)
+                color =  try NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: colorPurpleData)
+                color =  try NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: colorMintData)
+                
+            }catch let erorr {
+                print (erorr)
+            }
+        }
+        return color
+    }
+    
+}
 
 class ColorViewController: UIViewController {
     
@@ -64,10 +85,14 @@ class ColorViewController: UIViewController {
         
     }
     
+    
+    
     @objc func redColor (_ sender:UIButton){
 
         var  gameVC = GameViewController()
-        gameVC.imageViewCar.tintColor = .systemRed
+        UserDefaults.standard.setColor(color: .red, forKey: "ColorRed")
+    
+        gameVC.imageViewCar.tintColor = .red
         gameVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(gameVC, animated: true)
        
@@ -77,6 +102,7 @@ class ColorViewController: UIViewController {
     @objc func purpleColor (_ sender:UIButton){
         
         var  gameVC = GameViewController()
+        UserDefaults.standard.setColor(color: .purple, forKey: "ColorPuple")
         gameVC.imageViewCar.tintColor = .purple
         gameVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(gameVC, animated: true)
@@ -87,10 +113,13 @@ class ColorViewController: UIViewController {
     @objc func mintColor (_ sender:UIButton){
         
         var  gameVC = GameViewController()
+        UserDefaults.standard.setColor(color: .systemMint, forKey: "ColorMint")
         gameVC.imageViewCar.tintColor = .systemMint
         gameVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(gameVC, animated: true)
 
         
     }
+   
 }
+
