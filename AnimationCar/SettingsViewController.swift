@@ -10,61 +10,61 @@
 //3) Сохранение результатов каждой гонки - кастомным классом
 
 import UIKit
-
-
 class SettingsViewController: UIViewController {
 
     
-    let buttonColor = UIButton(frame: CGRect(x: 0, y: 200, width: 200, height: 30))
+    let buttonColor = UIButton(frame: CGRect(x: 0, y: 200, width: 200, height: 40))
     
-    let buttonBarrier = UIButton(frame: CGRect(x: 0, y: 300, width: 200, height: 30))
+    let buttonBarrier = UIButton(frame: CGRect(x: 0, y: 300, width: 200, height: 40))
     
-    let buttonName = UIButton(frame: CGRect(x: 0, y: 400, width: 200, height: 30))
+    let buttonName = UIButton(frame: CGRect(x: 0, y: 400, width: 200, height: 40))
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
          
         navigationItem.title = "Settings"
+       
+        navigationItem.leftBarButtonItem?.style = .plain
         view.backgroundColor = .white
         
-
+        let backround = UIImageView(frame: UIScreen.main.bounds)
+        backround.image = UIImage(named: "settings")
+        backround.contentMode = UIView.ContentMode.scaleToFill
+        self.view.insertSubview(backround, at: 0)
  
-        buttonColor.backgroundColor = .gray
+        buttonColor.backgroundColor = .black
         buttonColor.layer.cornerRadius = 10
         buttonColor.center.x = view.center.x
         buttonColor.setTitle("Change color", for: .normal)
+        buttonColor.setTitleColor(.white, for: .normal)
         buttonColor.addTarget(self, action: #selector(changeColor), for: .touchUpInside)
         view.addSubview(buttonColor)
       
         
-        buttonBarrier.backgroundColor = .gray
+        buttonBarrier.backgroundColor = .black
         buttonBarrier.layer.cornerRadius = 10
         buttonBarrier.center.x = view.center.x
         buttonBarrier.setTitle("Change barrier", for: .normal)
+        buttonBarrier.setTitleColor(.white, for: .normal)
         buttonBarrier.addTarget(self, action: #selector(changeBarrier), for: .touchUpInside)
         view.addSubview(buttonBarrier)
         
-        
-        
-        buttonName.backgroundColor = .gray
+        buttonName.backgroundColor = .black
         buttonName.layer.cornerRadius = 10
         buttonName.center.x = view.center.x
         buttonName.setTitle("Change Name", for: .normal)
+        buttonName.setTitleColor(.white, for: .normal)
         buttonName.addTarget(self, action: #selector(changeName), for: .touchUpInside)
         view.addSubview(buttonName)
     }
-
-
-
+    
     @objc func changeColor (_ sender: UIButton) {
         
         let  colorVC = ColorViewController()
         self.navigationController?.pushViewController(colorVC, animated: true)
         colorVC.view.backgroundColor = .white
         colorVC.modalPresentationStyle = .fullScreen
-      
-
     }
 
     @objc func changeBarrier (_ sender: UIButton) {
@@ -83,6 +83,4 @@ class SettingsViewController: UIViewController {
         nameVC.modalPresentationStyle = .fullScreen
 
     }
-    
-
 }

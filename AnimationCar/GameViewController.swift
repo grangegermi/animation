@@ -12,14 +12,8 @@
 
 import UIKit
 
-
-//protocol ChangeColorDelegate:AnyObject {
-//
-//    func changeColor ()
-//}
-
 class GameViewController:UIViewController {
-  
+    
     let imageViewCar = UIImageView(frame: CGRect(x: 0, y: 600, width: 100, height: 100))
     
     var brickView1 = UIImageView(frame: CGRect(x: 50, y: -50, width: 100, height: 60))
@@ -32,8 +26,6 @@ class GameViewController:UIViewController {
     let buttonLeft = UIButton(frame: CGRect(x: 100, y: 760, width: 60, height: 30))
     let buttonRight = UIButton(frame: CGRect(x: 220, y: 760, width: 60, height: 30))
     
-    
-    
     let viewForest = UIView(frame: CGRect(x: 0, y: 0, width:40, height: 2000))
     let viewForest1 = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 2000))
     let viewForest2 = UIView(frame: CGRect(x: 380, y: 0, width:40, height: 2000))
@@ -41,15 +33,16 @@ class GameViewController:UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+   
         
     navigationItem.leftBarButtonItem  = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"),style: .plain, target: self, action: #selector(back))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
       
         var roadView = UIImageView(frame: CGRect(x: 0, y: -700, width: view.frame.width, height: view.frame.height))
         var roadView1 = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         
         imageViewCar.image = UIImage(systemName: "car.fill")
         imageViewCar.center.x = view.center.x
+
     
         viewForest.backgroundColor = .systemGreen
         viewForest1.backgroundColor = .systemGreen
@@ -58,11 +51,6 @@ class GameViewController:UIViewController {
         
         roadView.image = UIImage(named: "road")
         roadView1.image = UIImage(named: "road")
-        
-//        brickView1.image = UIImage(systemName: "rhombus.fill")
-//        brickView2.image = UIImage(systemName: "rhombus.fill")
-//        brickView3.image = UIImage(systemName: "rhombus.fill")
-//        brickView4.image = UIImage(systemName: "rhombus.fill")
         
         view.addSubview(roadView)
         view.addSubview(roadView1)
@@ -102,7 +90,16 @@ class GameViewController:UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
-     
+        
+        var color  = UserDefaults.standard.colorForKey(key: "Color")
+        imageViewCar.tintColor = color
+        
+        var image = UserDefaults.standard.imageForKey(key: "Image")
+        brickView1.image = image
+        brickView2.image = image
+        brickView3.image = image
+        brickView4.image = image
+        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { timer in
             
             UIView.animate(withDuration: 10.0, delay: 0, options: [.repeat, .curveLinear], animations: {
@@ -156,23 +153,11 @@ class GameViewController:UIViewController {
         
     }
 
-    
    @objc func back() {
         
        self.navigationController?.popToRootViewController(animated: true)
         
     }
-    
-    @objc func save () {
-         var color = UIColor()
-        if  color == (UserDefaults.standard.colorForKey(key: "ColorRed") ?? .white) || color ==  (UserDefaults.standard.colorForKey(key: "ColorPurple") ?? .white) || color == (UserDefaults.standard.colorForKey(key: "ColorMint")  ?? .white){
-            
-            
-            imageViewCar.tintColor = color
-            
-        }
-  }
-                                                                                                                
     
     @objc func touchUp (_ sender:UIButton) {
         

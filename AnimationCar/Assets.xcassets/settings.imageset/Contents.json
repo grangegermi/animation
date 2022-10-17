@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "img1.akspic.ru-izdanie-avto-udachnyj_hod-poni_kar-rozovyj-1080x1920.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
