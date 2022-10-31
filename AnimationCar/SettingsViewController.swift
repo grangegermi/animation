@@ -19,6 +19,8 @@ class SettingsViewController: UIViewController {
     
     let buttonName = UIButton(frame: CGRect(x: 0, y: 400, width: 200, height: 40))
     
+    let buttonRecords = UIButton(frame: CGRect(x: 0, y: 500, width: 200, height: 40))
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -57,6 +59,15 @@ class SettingsViewController: UIViewController {
         buttonName.setTitleColor(.white, for: .normal)
         buttonName.addTarget(self, action: #selector(changeName), for: .touchUpInside)
         view.addSubview(buttonName)
+        
+        buttonRecords.backgroundColor = .black
+        buttonRecords.layer.cornerRadius = 10
+        buttonRecords.center.x = view.center.x
+        buttonRecords.setTitle("Records", for: .normal)
+        buttonRecords.setTitleColor(.white, for: .normal)
+        buttonRecords.addTarget(self, action: #selector(records), for: .touchUpInside)
+        view.addSubview(buttonRecords)
+//
     }
     
     @objc func changeColor (_ sender: UIButton) {
@@ -69,7 +80,7 @@ class SettingsViewController: UIViewController {
 
     @objc func changeBarrier (_ sender: UIButton) {
 
-        let  barrierVC = ChangeBarrierViewController ()
+        let  barrierVC = ChangeBarrierViewController()
         self.navigationController?.pushViewController(barrierVC, animated: true)
         barrierVC.view.backgroundColor = .white
         barrierVC.modalPresentationStyle = .fullScreen
@@ -81,6 +92,15 @@ class SettingsViewController: UIViewController {
         self.navigationController?.pushViewController(nameVC, animated: true)
         nameVC.view.backgroundColor = .darkGray
         nameVC.modalPresentationStyle = .fullScreen
+
+    }
+                                 
+    @objc func records(_ sender:UIButton) {
+
+        let  recordsVC = RecordsViewController()
+        self.navigationController?.pushViewController(recordsVC, animated: true)
+        recordsVC.view.backgroundColor = .darkGray
+        recordsVC.modalPresentationStyle = .fullScreen
 
     }
 }
