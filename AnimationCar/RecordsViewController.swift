@@ -10,11 +10,22 @@ import UIKit
 import SnapKit
 
 class RecordsViewController: UIViewController, UITableViewDataSource , UITableViewDelegate{
-
+    
     var tableView = UITableView()
-    var colors:[UIColor] = [.orange, .darkGray, .yellow, .purple, .systemPink, .green, .blue, .magenta, .red, .systemIndigo]
-  var cell = TableViewCell()
+    var colors:[UIColor] = [.orange,
+                            .darkGray,
+                            .yellow,
+                            .purple,
+                            .systemPink,
+                            .green,
+                            .blue,
+                            .magenta,
+                            .red,
+                            .systemIndigo]
 
+    
+    var cell = TableViewCell()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,11 +35,9 @@ class RecordsViewController: UIViewController, UITableViewDataSource , UITableVi
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         tableView.backgroundColor = .white
         tableView.frame = view.bounds
-      
-       
+
     }
-    
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -36,7 +45,7 @@ class RecordsViewController: UIViewController, UITableViewDataSource , UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-   
+        
         cell.createColor(color: colors[indexPath.row])
         
         cell.button.addTarget(self, action: #selector(changeColor), for: .touchUpInside)
@@ -53,15 +62,11 @@ class RecordsViewController: UIViewController, UITableViewDataSource , UITableVi
             make.top.equalToSuperview()
         }
     }
-
+    
     @objc func changeColor (_ sender:UIButton){
- 
+        
         let indexPath1 = IndexPath(row: sender.tag, section: 0)
         tableView.backgroundColor = colors[indexPath1.row]
-       
-    
-        
-        
-      
+
     }
 }

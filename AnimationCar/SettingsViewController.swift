@@ -11,7 +11,7 @@
 
 import UIKit
 class SettingsViewController: UIViewController {
-
+    
     
     let buttonColor = UIButton(frame: CGRect(x: 0, y: 200, width: 200, height: 40))
     
@@ -24,9 +24,9 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-         
+        
         navigationItem.title = "Settings"
-       
+        
         navigationItem.leftBarButtonItem?.style = .plain
         view.backgroundColor = .white
         
@@ -34,7 +34,7 @@ class SettingsViewController: UIViewController {
         backround.image = UIImage(named: "settings")
         backround.contentMode = UIView.ContentMode.scaleToFill
         self.view.insertSubview(backround, at: 0)
- 
+        
         buttonColor.backgroundColor = .black
         buttonColor.layer.cornerRadius = 10
         buttonColor.center.x = view.center.x
@@ -42,7 +42,7 @@ class SettingsViewController: UIViewController {
         buttonColor.setTitleColor(.white, for: .normal)
         buttonColor.addTarget(self, action: #selector(changeColor), for: .touchUpInside)
         view.addSubview(buttonColor)
-      
+        
         
         buttonBarrier.backgroundColor = .black
         buttonBarrier.layer.cornerRadius = 10
@@ -67,7 +67,6 @@ class SettingsViewController: UIViewController {
         buttonRecords.setTitleColor(.white, for: .normal)
         buttonRecords.addTarget(self, action: #selector(records), for: .touchUpInside)
         view.addSubview(buttonRecords)
-//
     }
     
     @objc func changeColor (_ sender: UIButton) {
@@ -77,30 +76,30 @@ class SettingsViewController: UIViewController {
         colorVC.view.backgroundColor = .white
         colorVC.modalPresentationStyle = .fullScreen
     }
-
+    
     @objc func changeBarrier (_ sender: UIButton) {
-
+        
         let  barrierVC = ChangeBarrierViewController()
         self.navigationController?.pushViewController(barrierVC, animated: true)
         barrierVC.view.backgroundColor = .white
         barrierVC.modalPresentationStyle = .fullScreen
     }
-
+    
     @objc func changeName (_ sender: UIButton) {
         
         let  nameVC = ChangeNameController()
         self.navigationController?.pushViewController(nameVC, animated: true)
         nameVC.view.backgroundColor = .darkGray
         nameVC.modalPresentationStyle = .fullScreen
-
+        
     }
                                  
     @objc func records(_ sender:UIButton) {
-
+        
         let  recordsVC = RecordsViewController()
         self.navigationController?.pushViewController(recordsVC, animated: true)
         recordsVC.view.backgroundColor = .darkGray
         recordsVC.modalPresentationStyle = .fullScreen
-
+        
     }
 }
